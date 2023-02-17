@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { getTobmolaCards } from "./helpers";
 
 export const useShuffler = (length: number) => {
   const [rest, setRest] = useState<number[]>(
@@ -26,4 +27,8 @@ export const useShuffler = (length: number) => {
     current,
     shuffle,
   };
+};
+
+export const useCards = (length?: number) => {
+  return getTobmolaCards();
 };
